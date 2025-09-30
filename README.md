@@ -1,24 +1,20 @@
-# README
+Тестовое задание на позицию Junior Backend Developer.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Раньше не работал с Ruby — изучал и писал проект с нуля с 24.09.2025 по 30.09.2025.
+С шаблоном MVC знаком по дипломному проекту на Node.js / React.
+Архитектурные принципы и настройку Docker ранее использовал в работе full-stack (Python / JavaScript).
 
-Things you may want to cover:
+Использовал:
+Ruby on Rails
+PostgreSQL
+Docker / docker-compose
+HTTParty ActiveRecord Kaminari
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Сделал:
+Реализовал CRUD для пациентов и врачей (есть скрипт для postgresql)
+Настроил связь многие-ко-многим
+Реализовал сервисы для бизнес-логики
+Добавил валидации на уровне моделей и базы данных
+Реализовал пагинацию, фильтры и сортировку
+Интеграция с внешним API
+REST API протестировал через Postman (колекция прилагается)
