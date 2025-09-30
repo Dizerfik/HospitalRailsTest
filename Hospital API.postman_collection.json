@@ -1,0 +1,472 @@
+{
+  "info": {
+    "_postman_id": "21971288-735d-44da-ae9b-0f0903c58e78",
+    "name": "Hospital API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "updatedAt": "2025-09-30T15:22:24.000Z",
+    "createdAt": "2025-09-30T11:35:48.000Z",
+    "lastUpdatedBy": "27170881",
+    "uid": "27170881-21971288-735d-44da-ae9b-0f0903c58e78"
+  },
+  "item": [
+    {
+      "name": "Создать врача",
+      "id": "fb372ff2-ac9b-45ad-bb4c-1a46e4197409",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"first_name\": \"Иван\",\n  \"last_name\": \"Петров\",\n  \"middle_name\": \"Сергеевич\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "doctors"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-fb372ff2-ac9b-45ad-bb4c-1a46e4197409"
+    },
+    {
+      "name": "Список врачей",
+      "id": "165bbb7c-9672-4aef-84a7-c85086ea3c04",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-165bbb7c-9672-4aef-84a7-c85086ea3c04"
+    },
+    {
+      "name": "Вывод врача",
+      "id": "5d1158e3-1f8a-442d-82d0-cd1f65529b4d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-5d1158e3-1f8a-442d-82d0-cd1f65529b4d"
+    },
+    {
+      "name": "Обновить врача",
+      "id": "5d120203-ae1f-4dab-a420-84aa0de9bc0d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-5d120203-ae1f-4dab-a420-84aa0de9bc0d"
+    },
+    {
+      "name": "Удалить врача",
+      "id": "ffc5ddaf-8870-40fb-9eb4-af6acce9bf17",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-ffc5ddaf-8870-40fb-9eb4-af6acce9bf17"
+    },
+    {
+      "name": "Создать пациента",
+      "id": "edfde632-ba1b-4e9e-8889-05a2ec715622",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"first_name\": \"Анна\",\n  \"last_name\": \"Иванова\",\n  \"middle_name\": \"Алексеевна\",\n  \"birthday\": \"1990-05-12\",\n  \"gender\": \"female\",\n  \"height\": 170,\n  \"weight\": 65,\n  \"doctor_ids\": [1]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-edfde632-ba1b-4e9e-8889-05a2ec715622"
+    },
+    {
+      "name": "Список пациентов (фильтрация)",
+      "id": "9be2718f-b80a-482c-b55a-5cc7911bbd1a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-9be2718f-b80a-482c-b55a-5cc7911bbd1a"
+    },
+    {
+      "name": "Вывод пациента",
+      "id": "549f6c57-c49b-4978-93ad-298c6ee42f06",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients?gender=female&limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients"
+          ],
+          "query": [
+            {
+              "key": "gender",
+              "value": "female"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-549f6c57-c49b-4978-93ad-298c6ee42f06"
+    },
+    {
+      "name": "Обновить пациента (добавить врача)",
+      "id": "469d2bb9-dd57-4f1e-bc60-f27b20d88325",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctor_ids\": [1, 2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/patients/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients",
+            "1"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-469d2bb9-dd57-4f1e-bc60-f27b20d88325"
+    },
+    {
+      "name": "Удалить пациента",
+      "id": "374b8227-aff5-4731-91b4-d2b409adc835",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctor_ids\": [1, 2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/patients/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients",
+            "1"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-374b8227-aff5-4731-91b4-d2b409adc835"
+    },
+    {
+      "name": "Рассчитать BMR",
+      "id": "4a9b5486-4f6b-4d69-b6b8-3660d52e9966",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formula\": \"mifflin\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/patients/1/bmr",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients",
+            "1",
+            "bmr"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-4a9b5486-4f6b-4d69-b6b8-3660d52e9966"
+    },
+    {
+      "name": "История BMR",
+      "id": "a974f373-8105-4e06-bbce-47dc3331320b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients/1/bmr_history?limit=5&offset=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients",
+            "1",
+            "bmr_history"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-a974f373-8105-4e06-bbce-47dc3331320b"
+    },
+    {
+      "name": "Рассчитать BMI",
+      "id": "51acc975-c54d-44bd-b79f-59db75b629c5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients/1/bmi",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "patients",
+            "1",
+            "bmi"
+          ]
+        }
+      },
+      "response": [],
+      "uid": "27170881-51acc975-c54d-44bd-b79f-59db75b629c5"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+
+CREATE TABLE patients
+(
+    id SERIAL PRIMARY KEY,
+    first_name CHARACTER VARYING(30) NOT NULL,
+    last_name CHARACTER VARYING(30) NOT NULL,
+	middle_name CHARACTER VARYING(30),
+	birthday DATE NOT NULL CHECK (birthday <= CURRENT_DATE AND birthday >= CURRENT_DATE - INTERVAL '150 years'),
+	gender CHAR(1) NOT NULL CHECK (gender IN ('M', 'F')),
+	height SMALLINT NOT NULL CHECK (height BETWEEN 50 AND 300),
+	weight NUMERIC(3,3) NOT NULL CHECK (weight BETWEEN 0 AND 800),
+	created_at TIMESTAMPTZ  NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMPTZ  NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	
+	CONSTRAINT uk_person_fullname_birthday UNIQUE (first_name, last_name, birthday)
+);
+
+CREATE TABLE doctors
+(
+	id SERIAL PRIMARY KEY,
+	first_name CHARACTER VARYING(30) NOT NULL,
+    last_name CHARACTER VARYING(30) NOT NULL,
+	middle_name CHARACTER VARYING(30) NOT NULL,
+	
+);
+
+CREATE TABLE patient_doctors (
+    id SERIAL PRIMARY KEY,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+	
+	CONSTRAINT fk_patient FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE RESTRICT,
+    CONSTRAINT fk_doctor FOREIGN KEY (doctor_id) REFERENCES doctors(id) ON DELETE RESTRICT,
+);
+
+CREATE OR REPLACE FUNCTION update_updated_at_column()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+CREATE TRIGGER update_persons_updated_at 
+    BEFORE UPDATE ON persons
+    FOR EACH ROW
+    EXECUTE FUNCTION update_updated_at_column();	
+
+-- INSERT INTO users (Name, Age) VALUES ('Tom', 33);
